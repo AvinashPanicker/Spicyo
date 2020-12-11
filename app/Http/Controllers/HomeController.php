@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Dish;
 
 class HomeController extends Controller
 {
@@ -10,7 +11,8 @@ class HomeController extends Controller
        return view('index');
    }
    public function blog(){
-       return view('blog');
+    $dishes=Dish::all();
+    return view('blog',compact('dishes'));
    }
    public function recipe(){
     return view('recipe');
