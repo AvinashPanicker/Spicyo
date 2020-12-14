@@ -10,10 +10,7 @@ class HomeController extends Controller
    public function index(){
        return view('index');
    }
-   public function blog(){
-    $dishes=Dish::all();
-    return view('blog',compact('dishes'));
-   }
+
    public function recipe(){
     return view('recipe');
    }
